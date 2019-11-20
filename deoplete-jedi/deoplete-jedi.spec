@@ -9,7 +9,6 @@ Summary:        deoplete.nvim source for Python
 License:        MIT
 URL:            https://github.com/deoplete-plugins/deoplete-jedi
 Source0:        https://github.com/deoplete-plugins/deoplete-jedi/archive/%{commit}.zip
-# Patch0:         use_system_libraries.patch
 
 BuildArch:      noarch
 
@@ -26,7 +25,6 @@ Provides a Python completion source for Deoplete, using the popular Jedi tool.
 
 %prep
 %autosetup -n "%{name}-%{commit}" -p1
-# %%patch0 -p1
 
 %build
 
