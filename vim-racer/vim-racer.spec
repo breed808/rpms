@@ -45,5 +45,5 @@ install -Dm0644 syntax/rustdoc.vim %{buildroot}%{vimfiles}/syntax/rustdoc.vim
 
 
 %changelog
-* Wed Nov 20 2019 Ben Reedy <breed808@breed808.com> - 0.0.1_b82273104b3383ce8fc239243007865f308034ca-1
+* Mon Dec 30 2019 Ben Reedy <breed808@breed808.com> - 0.0.1_4ed62b09b84b8212382d5c3b03278b6eb9ddc08b-1
 - Initial package
