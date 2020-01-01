@@ -2,7 +2,7 @@
 
 Name:           nvim-ale
 Version:        2.6.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
 URL:            https://github.com/dense-analysis/ale
@@ -96,7 +96,7 @@ Allows checking %{-n*} sources files.                                           
 %add_subpackage -n xhtml proselint
 %add_subpackage -n xml libxml2
 %add_subpackage -n yaml yamllint
-%add_subpackage -n vim vint
+%add_subpackage -n vim python3-vim-vint
 
 %prep
 %setup -qn "ale-%{version}"
@@ -262,6 +262,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Wed Jan 01 2020 Ben Reedy <breed808@breed808.com> - 2.6.0-3
+- Fix vim subpackage, using correct vint dependency. vint package is no longer supplied by official Fedora repos.
+
 * Wed Jan 01 2020 Ben Reedy <breed808@breed808.com> - 2.6.0-2
 - Add git subpackage, using gitlint for linting of git commit messages
 
@@ -269,7 +272,7 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 - Upstream release
 
 * Fri Aug 09 2019 Ben Reedy <breed808@breed808.com> - 2.5.0-3
-- Change vim dependecy from python2-vint to vint. vint package is supplied by official Fedora repos.
+- Change vim dependency from python2-vint to vint. vint package is supplied by official Fedora repos.
 
 * Fri Jul 26 2019 Ben Reedy <breed808@breed808.com> - 2.5.0-2
 - Add Rust subpackage
