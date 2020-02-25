@@ -2,7 +2,7 @@
 
 Name:           nvim-ale
 Version:        2.6.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
 URL:            https://github.com/dense-analysis/ale
@@ -75,7 +75,7 @@ Allows checking %{-n*} sources files.                                           
 # puppetlint not found in repos
 %add_subpackage -n puppet puppet
 %add_subpackage -n pyrex python3-Cython
-%add_subpackage -n python python3-flake8 python3-mypy python3-pylint python3-pycodestyle python3-vulture
+%add_subpackage -n python black python3-flake8 python3-mypy python3-pylint python3-pycodestyle python3-vulture
 %add_subpackage -n rst proselint
 %add_subpackage -n ruby ruby
 %add_subpackage -n rust cargo rls
@@ -262,6 +262,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Tue Feb 25 2020 Ben Reedy <breed808@breed808.com> - 2.6.0-4
+- Add Black fixer as dependency for Python subpackage
+
 * Wed Jan 01 2020 Ben Reedy <breed808@breed808.com> - 2.6.0-3
 - Fix vim subpackage, using correct vint dependency. vint package is no longer supplied by official Fedora repos.
 
