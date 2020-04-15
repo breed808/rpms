@@ -1,6 +1,6 @@
 %global srcname gitlint
 Name:       python-%{srcname}
-Version:    0.12.0
+Version:    0.13.1
 Release:    1%{?dist}
 Summary:    Linting for your git commit messages
 
@@ -47,6 +47,8 @@ BuildRequires:  python3-devel
 
 
 %changelog
+* Wed Apr 15 2020 Ben Reedy <breed808@breed808.com> - 0.13.1-1
+- Update to 0.13.1
+
 * Wed Jan 01 2020 Ben Reedy <breed808@breed808.com> - 0.12.0-1
 - Initial package
-
