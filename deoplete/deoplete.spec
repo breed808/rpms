@@ -1,7 +1,7 @@
 %global vimfiles %{_datadir}/nvim/runtime
 
 Name:           deoplete
-Version:        5.1
+Version:        5.2
 Release:        1%{?dist}
 Summary:        Dark powered asynchronous completion framework for neovim/Vim8
 License:        MIT
@@ -46,5 +46,8 @@ cp -rp rplugin/ %{buildroot}%{vimfiles}/rplugin
 
 
 %changelog
+* Wed Apr 15 2020 Ben Reedy <breed808@breed808.com> - 5.2-1
+- Update to 5.2
+
 * Wed Nov 20 2019 Ben Reedy <breed808@breed808.com> - 5.1-1
 - Initial package
