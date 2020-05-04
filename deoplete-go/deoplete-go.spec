@@ -1,6 +1,6 @@
 %global vimfiles %{_datadir}/nvim/runtime
 
-%define commit b82273104b3383ce8fc239243007865f308034ca
+%define commit 4f1ccd2ed70211fd025d052ec725c0b835bea487
 
 Name:           deoplete-go
 Version:        0.0.1_%{commit}
@@ -40,5 +40,8 @@ cp -rp rplugin/python3/deoplete/sources/* %{buildroot}%{vimfiles}/rplugin/python
 
 
 %changelog
+* Mon May 04 2020 Ben Reedy <breed808@breed808.com> - 0.0.1_4f1ccd2ed70211fd025d052ec725c0b835bea487-1
+- Update to latest commit
+
 * Wed Nov 20 2019 Ben Reedy <breed808@breed808.com> - 0.0.1_b82273104b3383ce8fc239243007865f308034ca-1
 - Initial package
