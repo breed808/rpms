@@ -1,8 +1,8 @@
 %global         vimfiles        %{_datadir}/nvim/runtime
 
 Name:           nvim-ale
-Version:        2.6.0
-Release:        4%{?dist}
+Version:        2.7.0
+Release:        1%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
 URL:            https://github.com/dense-analysis/ale
@@ -262,6 +262,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Fri Jun 12 2020 Ben Reedy <breed808@breed808.com> - 2.7.0-1
+- Upstream release
+
 * Tue Feb 25 2020 Ben Reedy <breed808@breed808.com> - 2.6.0-4
 - Add Black fixer as dependency for Python subpackage
 
