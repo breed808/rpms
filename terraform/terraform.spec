@@ -2,7 +2,7 @@
 %global _missing_build_ids_terminate_build 0
 
 Name:           terraform
-Version:        0.14.2
+Version:        0.14.4
 Release:        1%{?dist}
 Summary:        Tool for building infrastructure safely and efficiently
 License:        MPL-2.0
@@ -39,6 +39,9 @@ install -Dm0755 terraform-binary %{buildroot}%{_bindir}/terraform
 
 
 %changelog
+* Thu Jan 07 2020 Ben Reedy <breed808@breed808.com> - 0.14.4-1
+- Update to latest upstream release
+
 * Thu Dec 10 2020 Ben Reedy <breed808@breed808.com> - 0.14.2-1
 - Update to latest upstream release
 
