@@ -39,7 +39,7 @@ install -Dm0755 terraform-binary %{buildroot}%{_bindir}/terraform
 
 
 %changelog
-* Thu Jan 07 2020 Ben Reedy <breed808@breed808.com> - 0.14.4-1
+* Thu Jan 07 2021 Ben Reedy <breed808@breed808.com> - 0.14.4-1
 - Update to latest upstream release
 
 * Thu Dec 10 2020 Ben Reedy <breed808@breed808.com> - 0.14.2-1
