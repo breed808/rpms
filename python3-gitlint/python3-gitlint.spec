@@ -1,6 +1,6 @@
 %global srcname gitlint
 Name:       python-%{srcname}
-Version:    0.13.1
+Version:    0.15.0
 Release:    1%{?dist}
 Summary:    Linting for your git commit messages
 
@@ -10,9 +10,13 @@ Source0:    %{pypi_source}
 
 BuildArch: noarch
 
+Requires:   python3-arrow >= 0.17
+Requires:   python3-sh >= 1.14.1
+
 %global _description %{expand:
 Git commit message linter written in python (for Linux and Mac, experimental on Windows), checks your commit messages for style.}
 
+%{?python_disable_dependency_generator}
 %description %_description
 
 %package -n python3-%{srcname}
@@ -47,6 +51,10 @@ BuildRequires:  python3-devel
 
 
 %changelog
+* Thu Feb 04 2021 Ben Reedy <breed808@breed808.com> - 0.15.0-1
+- Update to latest release
+- Set manual runtime dependencies, as automatic dependency versioning is too strict.
+
 * Wed Apr 15 2020 Ben Reedy <breed808@breed808.com> - 0.13.1-1
 - Update to 0.13.1
 
