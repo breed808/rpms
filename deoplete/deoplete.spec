@@ -1,8 +1,8 @@
 %global vimfiles %{_datadir}/nvim/runtime
-%define commit a39f78f5e599ef29cc15c46c352ec5560e0f8e73
+%define commit c4fe2529719e701d5d30994cab9650d82019f495
 
 Name:           deoplete
-Version:        5.2_%{commit}
+Version:        6.0_%{commit}
 Release:        1%{?dist}
 Summary:        Dark powered asynchronous completion framework for neovim/Vim8
 License:        MIT
@@ -48,6 +48,9 @@ cp -rp rplugin/ %{buildroot}%{vimfiles}/rplugin
 
 
 %changelog
+* Sun Feb 07 2021 Ben Reedy <breed808@breed808.com> - 6.0_c4fe2529719e701d5d30994cab9650d82019f495-1
+- Update to latest release & git commit.
+
 * Sun Nov 08 2020 Ben Reedy <breed808@breed808.com> - 5.2_a39f78f5e599ef29cc15c46c352ec5560e0f8e73-1
 - Update to latest git commit, as there's been no recent release.
 
