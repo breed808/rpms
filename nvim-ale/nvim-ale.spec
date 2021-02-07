@@ -1,7 +1,7 @@
 %global         vimfiles        %{_datadir}/nvim/runtime
 
 Name:           nvim-ale
-Version:        3.0.0
+Version:        3.1.0
 Release:        1%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
@@ -262,6 +262,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Sun Feb 07 2021 Ben Reedy <breed808@breed808.com> - 3.1.0-1
+- Upstream release
+
 * Thu Sep 10 2020 Ben Reedy <breed808@breed808.com> - 3.0.0-1
 - Upstream release
 
