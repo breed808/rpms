@@ -2,7 +2,7 @@
 
 Name:           nvim-ale
 Version:        3.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
 URL:            https://github.com/dense-analysis/ale
@@ -47,7 +47,7 @@ Allows checking %{-n*} sources files.                                           
 %add_subpackage -n fish fish
 %add_subpackage -n fortran gcc-gfortran
 %add_subpackage -n git python3-gitlint
-%add_subpackage -n go golang-bin golint
+%add_subpackage -n go golang-bin golint golang-x-tools-gopls
 # ale only support hamllint, need to add support for haml upstream
 # %%add_subpackage -n haml rubygem-haml
 %add_subpackage -n haskell ghc hlint
@@ -262,6 +262,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Tue Feb 09 2021 Ben Reedy <breed808@breed808.com> - 3.1.0-2
+- Add gopls as dependency to go subpackage
+
 * Sun Feb 07 2021 Ben Reedy <breed808@breed808.com> - 3.1.0-1
 - Upstream release
 
