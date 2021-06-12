@@ -1,13 +1,18 @@
 # Go compiler sets its own build ID, causing the build to fail.
-%global _missing_build_ids_terminate_build 0
+%undefine _missing_build_ids_terminate_build
+
+%global debug_package %{nil}
 
 Name:           terraform
-Version:        0.13.5
+Version:        1.0.0
 Release:        1%{?dist}
 Summary:        Tool for building infrastructure safely and efficiently
 License:        MPL-2.0
 URL:            https://www.terraform.io/
 Source0:        https://github.com/hashicorp/terraform/archive/v%{version}.tar.gz
+Source1:        0001-Fix-tencentcloud-sdk-dependency.patch
+
+BuildRequires:  git
 
 # e.g. el6 has ppc64 arch without gcc-go, so EA tag is required
 ExclusiveArch:  %{?go_arches:%{go_arches}}%{!?go_arches:%{ix86} x86_64 aarch64 %{arm}}
@@ -21,11 +26,13 @@ providers as well as custom in-house solutions.
 
 %prep
 %autosetup
+# %%patch macro fails on this patch for some reason, so call patch directly.
+patch -p1 < %SOURCE1
 
 
 %build
-export GOFLAGS=-mod=vendor
-go build -ldflags=-linkmode=external -o terraform-binary
+export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
+go build -o terraform-binary
 
 
 %install
@@ -39,6 +46,18 @@ install -Dm0755 terraform-binary %{buildroot}%{_bindir}/terraform
 
 
 %changelog
+* Sat Jun 12 2021 Ben Reedy <breed808@breed808.com> - 1.0.0-1
+- Patch tencentcloud-sdk dependency to fix build process.
+
+* Wed Jun 09 2021 Ben Reedy <breed808@breed808.com> - 1.0.0-1
+- Update to 1.0.0 release
+
+* Thu May 06 2021 Ben Reedy <breed808@breed808.com> - 0.15.1-1
+- Update to latest 0.15 release
+
+* Thu Apr 15 2021 Ben Reedy <breed808@breed808.com> - 0.15.0-1
+- Update to latest 0.15 release
+
 * Wed Feb 17 2021 Ben Reedy <breed808@breed808.com> - 0.13.5-1
 - Update to latest 0.13 release
 
