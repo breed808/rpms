@@ -12,7 +12,7 @@ Source0:        https://github.com/nvim-treesitter/nvim-treesitter/archive/%{com
 
 BuildArch:      noarch
 
-Requires:       neovim-nightly
+Requires:       neovim
 Requires:       gcc-c++
 Requires:       libstdc++-static
 

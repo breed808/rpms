@@ -13,7 +13,7 @@ Source0:        https://github.com/deoplete-plugins/deoplete-lsp/archive/%{commi
 BuildArch:      noarch
 
 Requires:       deoplete
-Requires:       neovim-nightly
+Requires:       neovim
 Requires:       python3-neovim
 Requires:       python3-ujson
 
