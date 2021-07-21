@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           terraform
-Version:        1.0.2
+Version:        1.0.3
 Release:        1%{?dist}
 Summary:        Tool for building infrastructure safely and efficiently
 License:        MPL-2.0
@@ -46,6 +46,9 @@ install -Dm0755 terraform-binary %{buildroot}%{_bindir}/terraform
 
 
 %changelog
+* Thu Jul 22 2021 Ben Reedy <breed808@breed808.com> - 1.0.3-1
+- Update to 1.0.3 release
+
 * Thu Jul 08 2021 Ben Reedy <breed808@breed808.com> - 1.0.2-1
 - Update to 1.0.2 release
 
