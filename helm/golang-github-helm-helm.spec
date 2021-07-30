@@ -15,7 +15,7 @@
 %global import_path     %{provider_prefix}
 
 Name:           golang-%{provider}-%{project}-%{repo}
-Version:        3.1.1
+Version:        3.6.3
 Release:        1%{?dist}
 Summary:        The Kubernetes Package Manager
 License:        Apache 2.0
@@ -84,5 +84,8 @@ go test -mod vendor
 
 
 %changelog
+* Fri Jul 30 2021 Ben Reedy <breed808@breed808.com> - 3.6.3-1
+- Update to latest upstream release
+
 * Wed Feb 05 2020 Ben Reedy <breed808@breed808.com> - 3.1.1-1
 - Initial package
