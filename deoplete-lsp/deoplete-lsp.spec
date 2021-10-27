@@ -1,12 +1,11 @@
 %global vimfiles %{_datadir}/nvim/runtime
 
-%define commit e526dbecda137e37c45492ce72fa92ea32314154
+%define commit f3d1f14fa8a8cf882be39605fb037ee982c3f37c
 
 Name:           deoplete-lsp
 Version:        0.0.1_%{commit}
 Release:        2%{?dist}
-Summary:        deoplete.nvim source for LSP clients
-License:        MIT
+Summary:        deoplete.nvim source for LSP clients License:        MIT
 URL:            https://github.com/deoplete-plugins/deoplete-lsp
 Source0:        https://github.com/deoplete-plugins/deoplete-lsp/archive/%{commit}.zip
 
@@ -46,6 +45,10 @@ cp -rp lua/ %{buildroot}%{vimfiles}/lua
 
 
 %changelog
+* Wed Oct 27 2021 Ben Reedy <breed808@breed808.com> - 0.0.1_f3d1f14fa8a8cf882be39605fb037ee982c3f37c-2
+- Update to latest upstream commit
+- Fix issue with neovim 0.5.1
+
 * Wed Feb 10 2021 Ben Reedy <breed808@breed808.com> - 0.0.1_e526dbecda137e37c45492ce72fa92ea32314154-2
 - Set runtime dependency of neovim-nightly (from neovim)
 
