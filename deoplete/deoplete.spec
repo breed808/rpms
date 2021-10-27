@@ -1,5 +1,5 @@
 %global vimfiles %{_datadir}/nvim/runtime
-%define commit c4fe2529719e701d5d30994cab9650d82019f495
+%define commit 18788fc822abd1ac1ffc1a8189afbfae15d06cf9
 
 Name:           deoplete
 Version:        6.0_%{commit}
@@ -48,6 +48,9 @@ cp -rp rplugin/ %{buildroot}%{vimfiles}/rplugin
 
 
 %changelog
+* Wed Oct 27 2021 Ben Reedy <breed808@breed808.com> - 6.0_18788fc822abd1ac1ffc1a8189afbfae15d06cf9-1
+- Update to latest git commit.
+
 * Sun Feb 07 2021 Ben Reedy <breed808@breed808.com> - 6.0_c4fe2529719e701d5d30994cab9650d82019f495-1
 - Update to latest release & git commit.
 
