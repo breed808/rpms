@@ -1,7 +1,7 @@
 %global srcname vim-vint
 Name:       python-%{srcname}
 Version:    0.3.21
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Vim script language linter
 
 License:    MIT
@@ -18,6 +18,7 @@ Fast and Highly Extensible Vim script Language Lint implemented in Python}
 %package -n python3-%{srcname}
 Summary:        %{summary}
 BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
 %{?python_provide:%python_provide python3-%{srcname}}
 
 %description -n python3-%{srcname} %_description
@@ -47,6 +48,9 @@ BuildRequires:  python3-devel
 
 
 %changelog
+* Wed Nov 17 2021 Ben Reedy <breed808@breed808.com> - 0.3.21-2
+- Add setuptools build dependency
+
 * Wed Jan 01 2020 Ben Reedy <breed808@breed808.com> - 0.3.21-1
 - Initial package
 
