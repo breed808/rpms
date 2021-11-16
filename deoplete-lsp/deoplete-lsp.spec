@@ -5,7 +5,8 @@
 Name:           deoplete-lsp
 Version:        0.0.1_%{commit}
 Release:        2%{?dist}
-Summary:        deoplete.nvim source for LSP clients License:        MIT
+Summary:        deoplete.nvim source for LSP clients
+License:        MIT
 URL:            https://github.com/deoplete-plugins/deoplete-lsp
 Source0:        https://github.com/deoplete-plugins/deoplete-lsp/archive/%{commit}.zip
 
