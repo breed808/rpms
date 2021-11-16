@@ -1,6 +1,6 @@
 %global srcname gitlint
 Name:       python-%{srcname}
-Version:    0.15.0
+Version:    0.16.0
 Release:    1%{?dist}
 Summary:    Linting for your git commit messages
 
@@ -22,6 +22,7 @@ Git commit message linter written in python (for Linux and Mac, experimental on 
 %package -n python3-%{srcname}
 Summary:        %{summary}
 BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
 %{?python_provide:%python_provide python3-%{srcname}}
 
 %description -n python3-%{srcname} %_description
@@ -51,6 +52,10 @@ BuildRequires:  python3-devel
 
 
 %changelog
+* Wed Nov 17 2021 Ben Reedy <breed808@breed808.com> - 0.16.0-1
+- Update to latest release
+- Add setuptools build dependency
+
 * Thu Feb 04 2021 Ben Reedy <breed808@breed808.com> - 0.15.0-1
 - Update to latest release
 - Set manual runtime dependencies, as automatic dependency versioning is too strict.
