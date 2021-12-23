@@ -1,6 +1,6 @@
 %global vimfiles %{_datadir}/nvim/runtime
 
-%define commit 42f4c24a951b0fb5e76a70e5234f16193a8a746d
+%define commit 43058915007d92dc167b84dd5b8ada2d2a057a82
 
 Name:           deoplete-jedi
 Version:        0.0.1_%{commit}
@@ -41,6 +41,9 @@ cp -rp rplugin/python3/deoplete/sources/* %{buildroot}%{vimfiles}/rplugin/python
 
 
 %changelog
+* Fri Dec 24 2021 Ben Reedy <breed808@breed808.com> - 0.0.1_43058915007d92dc167b84dd5b8ada2d2a057a82-1
+- Update to latest project commit
+
 * Wed Apr 15 2020 Ben Reedy <breed808@breed808.com> - 0.0.1_42f4c24a951b0fb5e76a70e5234f16193a8a746d-1
 - Update to latest project commit
 
