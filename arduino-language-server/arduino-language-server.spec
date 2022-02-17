@@ -5,7 +5,7 @@
 
 Name:           arduino-language-server
 Version:        0.6.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Language server for Arduino programming language
 License:        Apache2
 URL:            https://github.com/arduino/arduino-language-server
@@ -18,6 +18,7 @@ BuildRequires:  %{?go_compiler:compiler(go-compiler)}%{!?go_compiler:golang}
 BuildRequires:  git
 
 Requires:       arduino-cli
+Requires:       clang-tools-extra
 
 %description
 The Arduino Language Server is the tool that powers the autocompletion of the new Arduino IDE 2.
@@ -43,7 +44,10 @@ install -Dm0755 arduino-language-server %{buildroot}%{_bindir}/arduino-language-
 
 
 %changelog
-* Thu Feb 17 2022 Ben Reedy <breed808@breed808.com> - 0.6.0-2
+* Fri Feb 18 2022 Ben Reedy <breed808@breed808.com> - 0.6.0-3
+- Add clangd runtime dependency
+
+* Fri Feb 18 2022 Ben Reedy <breed808@breed808.com> - 0.6.0-2
 - Add arduino-cli runtime dependency
 
 * Thu Feb 17 2022 Ben Reedy <breed808@breed808.com> - 0.6.0-1
