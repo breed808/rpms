@@ -8,8 +8,8 @@ Version:        0.6.0
 Release:        1%{?dist}
 Summary:        Language server for Arduino programming language
 License:        Apache2
-URL:            https://arduino-language-servercli.io/
-Source0:        https://github.com/derailed/arduino-language-server/archive/v%{version}.tar.gz
+URL:            https://github.com/arduino/arduino-language-server
+Source0:        https://github.com/arduino/arduino-language-server/archive/refs/tags/%{version}.tar.gz
 
 # e.g. el6 has ppc64 arch without gcc-go, so EA tag is required
 ExclusiveArch:  %{?go_arches:%{go_arches}}%{!?go_arches:%{ix86} x86_64 aarch64 %{arm}}
