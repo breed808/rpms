@@ -1,6 +1,6 @@
 %global debug_package %{nil}
 Name:           pyright
-Version:        1.1.199
+Version:        1.1.222
 Release:        1%{?dist}
 Summary:        Type check for the Python language
 License:        MIT
@@ -46,6 +46,9 @@ ln -s "%{_libdir}/node_modules/%{name}/langserver.index.js" "%{buildroot}%{_bind
 %{_libdir}/node_modules/%{name}
 
 %changelog
+* Thu Feb 17 2022 Ben Reedy <breed808@breed808.com> - 1.1.222-1
+- Update to latest upstream release
+
 * Fri Dec 24 2021 Ben Reedy <breed808@breed808.com> - 1.1.199-1
 - Update to latest upstream release
 
