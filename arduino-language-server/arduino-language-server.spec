@@ -6,7 +6,7 @@
 Name:           arduino-language-server
 Version:        0.6.0
 Release:        1%{?dist}
-Summary:        Kubernetes text-based user interface (TUI)
+Summary:        Language server for Arduino programming language
 License:        Apache2
 URL:            https://arduino-language-servercli.io/
 Source0:        https://github.com/derailed/arduino-language-server/archive/v%{version}.tar.gz
