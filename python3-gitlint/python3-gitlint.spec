@@ -1,12 +1,12 @@
 %global srcname gitlint
 Name:       python-%{srcname}
-Version:    0.16.0
-Release:    2%{?dist}
+Version:    0.17.0
+Release:    1%{?dist}
 Summary:    Linting for your git commit messages
 
 License:    MIT
 URL:        https://pypi.org/project/gitlint/
-Source0:    %{pypi_source}
+Source0:    https://github.com/jorisroovers/gitlint/archive/refs/tags/v%{version}.tar.gz
 
 BuildArch: noarch
 
@@ -32,10 +32,12 @@ Requires:   python3-sh >= 1.14.1
 
 
 %build
+cd gitlint-core
 %py3_build
 
 
 %install
+cd gitlint-core
 %py3_install
 
 
@@ -46,12 +48,15 @@ Requires:   python3-sh >= 1.14.1
 %files -n python3-%{srcname}
 %license LICENSE
 %doc README.md
-%{python3_sitelib}/%{srcname}-*.egg-info/
+%{python3_sitelib}/%{srcname}_core-*.egg-info/
 %{python3_sitelib}/%{srcname}/
 %{_bindir}/%{srcname}
 
 
 %changelog
+* Fri Feb 18 2022 Ben Reedy <breed808@breed808.com> - 0.17.0-1
+- Update to v0.17.0
+
 * Tue Nov 23 2021 Ben Reedy <breed808@breed808.com> - 0.16.0-2
 - Set package runtime dependencies correctly.
 
