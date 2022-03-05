@@ -1,8 +1,8 @@
 %global         vimfiles        %{_datadir}/nvim/runtime
 
 Name:           nvim-ale
-Version:        3.1.0
-Release:        2%{?dist}
+Version:        3.2.0
+Release:        1%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
 URL:            https://github.com/dense-analysis/ale
@@ -139,6 +139,7 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/autoload/ale/fixers/*.vim
 %{vimfiles}/autoload/ale/handlers/*.vim
 %{vimfiles}/autoload/ale/lsp/*.vim
+%{vimfiles}/autoload/ale/uri/*.vim
 %{vimfiles}/doc/ale*.txt
 %{vimfiles}/ftplugin/*.vim
 %{vimfiles}/plugin/ale.vim
@@ -262,6 +263,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Sat Mar 05 2022 Ben Reedy <breed808@breed808.com> - 3.2.0-1
+- Upstream release
+
 * Tue Feb 09 2021 Ben Reedy <breed808@breed808.com> - 3.1.0-2
 - Add gopls as dependency to go subpackage
 
