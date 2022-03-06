@@ -2,7 +2,7 @@
 
 Name:           nvim-ale
 Version:        3.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
 URL:            https://github.com/dense-analysis/ale
@@ -39,7 +39,7 @@ Allows checking %{-n*} sources files.                                           
 # No stylelint in Fedora repos, only csslint
 %add_subpackage -n css csslint
 # %%add_subpackage -n d dmd
-# %%add_subpackage -n dockerfile hadolint
+%add_subpackage -n dockerfile hadolint
 # %%add_subpackage -n elixir credo dogma
 # %%add_subpackage -n elm elm-make
 %add_subpackage -n erlang erlang-erts
@@ -166,6 +166,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %files css
 %{vimfiles}/ale_linters/css
 
+%files docker
+%{vimfiles}/ale_linters/dockerfile
+
 %files erlang
 %{vimfiles}/ale_linters/erlang
 
@@ -263,6 +266,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Sat Mar 05 2022 Ben Reedy <breed808@breed808.com> - 3.2.0-2
+- Add dockerfile subpackage
+
 * Sat Mar 05 2022 Ben Reedy <breed808@breed808.com> - 3.2.0-1
 - Upstream release
 
