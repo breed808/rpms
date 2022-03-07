@@ -166,7 +166,7 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %files css
 %{vimfiles}/ale_linters/css
 
-%files docker
+%files dockerfile
 %{vimfiles}/ale_linters/dockerfile
 
 %files erlang
