@@ -1,6 +1,6 @@
 %global debug_package %{nil}
 Name:           yaml-language-server
-Version:        1.6.0
+Version:        1.7.0
 Release:        1%{?dist}
 Summary:        Language Server for YAML Files
 License:        MIT
@@ -44,5 +44,8 @@ cp -r bin lib node_modules out package.json \
 %{_libdir}/node_modules/%{name}
 
 %changelog
+* Tue Apr 26 2022 Ben Reedy <breed808@breed808.com> - 1.7.0-1
+- Upgrade to v1.7.0
+
 * Wed Apr 20 2022 Ben Reedy <breed808@breed808.com> - 1.6.0-1
 - Initial package
