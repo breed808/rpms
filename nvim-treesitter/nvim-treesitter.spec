@@ -1,9 +1,9 @@
 %global vimfiles %{_datadir}/nvim/runtime
 
-%define commit 2298a7584414af40a6a09cbe72a81175382992c7
+%define commit aaf5d370f477dd2ff5f7704fed93483f46d0eef0
 
 Name:           nvim-treesitter
-Version:        0.0.5_%{commit}
+Version:        0.0.6_%{commit}
 Release:        1%{?dist}
 Summary:        Experimental highlighting plugin for Neovim
 License:        MIT
@@ -30,10 +30,8 @@ nvim-treesitter provides a simple and easy way to use the interface for tree-sit
 mkdir -p %{buildroot}%{vimfiles}/autoload
 mkdir -p %{buildroot}%{vimfiles}/doc
 
-cp -rp after/ %{buildroot}%{vimfiles}/after
 cp -rp autoload/* %{buildroot}%{vimfiles}/autoload/
 cp -p doc/*.txt %{buildroot}%{vimfiles}/doc/
-cp -rp ftdetect/ %{buildroot}%{vimfiles}/ftdetect
 cp -rp lua/ %{buildroot}%{vimfiles}/lua
 cp -rp plugin/ %{buildroot}%{vimfiles}/plugin
 cp -rp queries/ %{buildroot}%{vimfiles}/queries
@@ -43,10 +41,8 @@ install -Dm0644 lockfile.json %{buildroot}%{vimfiles}/lockfile.json
 %files
 %license LICENSE
 %doc README.md
-%{vimfiles}/after
 %{vimfiles}/autoload
 %{vimfiles}/doc/*.txt
-%{vimfiles}/ftdetect
 %{vimfiles}/lua
 %{vimfiles}/plugin
 %{vimfiles}/queries
@@ -54,6 +50,9 @@ install -Dm0644 lockfile.json %{buildroot}%{vimfiles}/lockfile.json
 
 
 %changelog
+* Wed May 11 2022 Ben Reedy <breed808@breed808.com> - 0.0.5_aaf5d370f477dd2ff5f7704fed93483f46d0eef0-1
+- Update to latest git commit
+
 * Thu Feb 17 2022 Ben Reedy <breed808@breed808.com> - 0.0.5_2298a7584414af40a6a09cbe72a81175382992c7-1
 - Update to latest git commit
 
