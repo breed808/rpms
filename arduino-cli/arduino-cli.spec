@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           arduino-cli
-Version:        0.21.0
+Version:        0.22.0
 Release:        1%{?dist}
 Summary:        Language server for Arduino programming language
 License:        Apache2
@@ -41,5 +41,8 @@ install -Dm0755 arduino-cli %{buildroot}%{_bindir}/arduino-cli
 
 
 %changelog
+* Sun May 29 2022 Ben Reedy <breed808@breed808.com> - 0.22.0-1
+- Update to v0.22.0
+
 * Fri Feb 18 2022 Ben Reedy <breed808@breed808.com> - 0.21.0-1
 - Initial package
