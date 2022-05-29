@@ -1,6 +1,6 @@
 %global debug_package %{nil}
 Name:           sslscan
-Version:        2.0.10
+Version:        2.0.13
 Release:        1%{?dist}
 Summary:        SSL/TLS cipher suite scanner
 
@@ -34,6 +34,9 @@ sslscan tests SSL/TLS enabled services to discover supported cipher suites.
 
 
 %changelog
+* Sun May 29 2022 Ben Reedy <breed808@breed808.com> - 2.0.13-1
+- Update to latest upstream release
+
 * Wed June 30 2021 Ben Reedy <breed808@breed808.com> - 2.0.10-1
 - Update to latest upstream release
 
