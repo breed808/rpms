@@ -1,9 +1,9 @@
 %global vimfiles %{_datadir}/nvim/runtime
 
-%define commit aaf5d370f477dd2ff5f7704fed93483f46d0eef0
+%define commit a10b603a2cd6d336412e996970e91566492562d2
 
 Name:           nvim-treesitter
-Version:        0.0.6_%{commit}
+Version:        0.0.7_%{commit}
 Release:        1%{?dist}
 Summary:        Experimental highlighting plugin for Neovim
 License:        MIT
@@ -50,6 +50,9 @@ install -Dm0644 lockfile.json %{buildroot}%{vimfiles}/lockfile.json
 
 
 %changelog
+* Sun May 29 2022 Ben Reedy <breed808@breed808.com> - 0.0.7_a10b603a2cd6d336412e996970e91566492562d2-1
+- Update to latest git commit
+
 * Wed May 11 2022 Ben Reedy <breed808@breed808.com> - 0.0.5_aaf5d370f477dd2ff5f7704fed93483f46d0eef0-1
 - Update to latest git commit
 
