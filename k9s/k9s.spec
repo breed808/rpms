@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           k9s
-Version:        0.25.18
+Version:        0.25.21
 Release:        1%{?dist}
 Summary:        Kubernetes text-based user interface (TUI)
 License:        Apache2
@@ -40,6 +40,9 @@ install -Dm0755 execs/k9s %{buildroot}%{_bindir}/k9s
 
 
 %changelog
+* Fri Jul 08 2022 Ben Reedy <breed808@breed808.com> - 0.25.21-1
+- Update to v0.25.21
+
 * Thu Feb 24 2022 Ben Reedy <breed808@breed808.com> - 0.25.18-1
 - Update to v0.25.18
 
