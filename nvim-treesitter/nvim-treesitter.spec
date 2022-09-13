@@ -1,6 +1,6 @@
 %global vimfiles %{_datadir}/nvim/runtime
 
-%define commit a10b603a2cd6d336412e996970e91566492562d2
+%define commit 5891e2e1601237da229e5de6f242ad8616ea09d2
 
 Name:           nvim-treesitter
 Version:        0.0.7_%{commit}
@@ -50,6 +50,9 @@ install -Dm0644 lockfile.json %{buildroot}%{vimfiles}/lockfile.json
 
 
 %changelog
+* Wed Sep 14 2022 Ben Reedy <breed808@breed808.com> - 0.0.8_5891e2e1601237da229e5de6f242ad8616ea09d2-1
+- Update to latest git commit
+
 * Sun May 29 2022 Ben Reedy <breed808@breed808.com> - 0.0.7_a10b603a2cd6d336412e996970e91566492562d2-1
 - Update to latest git commit
 
