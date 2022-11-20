@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           k9s
-Version:        0.26.3
+Version:        0.26.7
 Release:        1%{?dist}
 Summary:        Kubernetes text-based user interface (TUI)
 License:        Apache2
@@ -26,6 +26,9 @@ K9s provides a terminal UI to interact with your Kubernetes clusters. The aim of
 
 %build
 export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
+# Hash mismatch in go.sum for tview dependency. Needs to be fixed in k9s upstream.
+sed -i '/tview/d' go.sum
+go mod tidy
 make VERSION=%{version} build
 
 
@@ -40,6 +43,9 @@ install -Dm0755 execs/k9s %{buildroot}%{_bindir}/k9s
 
 
 %changelog
+* Sun Nov 20 2022 Ben Reedy <breed808@breed808.com> - 0.26.7-1
+- Update to v0.26.7
+
 * Sat Sep 17 2022 Ben Reedy <breed808@breed808.com> - 0.26.3-1
 - Update to v0.26.3
 
