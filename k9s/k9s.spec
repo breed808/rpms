@@ -58,7 +58,7 @@ install -Dm0755 execs/k9s %{buildroot}%{_bindir}/k9s
 * Mon Jul 19 2021 Ben Reedy <breed808@breed808.com> - 0.24.14-1
 - Update to latest upstream release
 
-* Sat June 19 2021 Ben Reedy <breed808@breed808.com> - 0.24.10-1
+* Sat Jun 19 2021 Ben Reedy <breed808@breed808.com> - 0.24.10-1
 - Update to latest upstream release
 
 * Sat May 08 2021 Ben Reedy <breed808@breed808.com> - 0.24.9-1
