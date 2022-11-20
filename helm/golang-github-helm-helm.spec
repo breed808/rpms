@@ -15,7 +15,7 @@
 %global import_path     %{provider_prefix}
 
 Name:           golang-%{provider}-%{project}-%{repo}
-Version:        3.9.2
+Version:        3.10.2
 Release:        1%{?dist}
 Summary:        The Kubernetes Package Manager
 License:        Apache 2.0
@@ -84,7 +84,10 @@ go test -mod vendor
 
 
 %changelog
-* Sat Jul 30 2021 Ben Reedy <breed808@breed808.com> - 3.9.2-1
+* Sun Nov 20 2022 Ben Reedy <breed808@breed808.com> - 3.10.2-1
+- Update to 3.10.2
+
+* Sat Jul 30 2022 Ben Reedy <breed808@breed808.com> - 3.9.2-1
 - Reintroduce custom package due to dated helm package in Fedora repositories.
 - Update to v3.9.2
 
