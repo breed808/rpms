@@ -1,8 +1,8 @@
 %global         vimfiles        %{_datadir}/nvim/runtime
 
 Name:           nvim-ale
-Version:        3.2.0
-Release:        2%{?dist}
+Version:        3.3.0
+Release:        1%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
 URL:            https://github.com/dense-analysis/ale
@@ -266,6 +266,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Mon Dec 26 2022 Ben Reedy <breed808@breed808.com> - 3.3.0-1
+- Update to v3.3.0
+
 * Sat Mar 05 2022 Ben Reedy <breed808@breed808.com> - 3.2.0-2
 - Add dockerfile subpackage
 
