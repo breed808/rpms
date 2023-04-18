@@ -4,8 +4,8 @@
 %global debug_package %{nil}
 
 Name:           k9s
-Version:        0.26.7
-Release:        1%{?dist}
+Version:        0.27.3
+Release:        %autorelease
 Summary:        Kubernetes text-based user interface (TUI)
 License:        Apache2
 URL:            https://k9scli.io/
@@ -43,47 +43,4 @@ install -Dm0755 execs/k9s %{buildroot}%{_bindir}/k9s
 
 
 %changelog
-* Sun Nov 20 2022 Ben Reedy <breed808@breed808.com> - 0.26.7-1
-- Update to v0.26.7
-
-* Sat Sep 17 2022 Ben Reedy <breed808@breed808.com> - 0.26.3-1
-- Update to v0.26.3
-
-* Fri Jul 22 2022 Ben Reedy <breed808@breed808.com> - 0.26.0-1
-- Update to v0.26.0
-
-* Fri Jul 08 2022 Ben Reedy <breed808@breed808.com> - 0.25.21-1
-- Update to v0.25.21
-
-* Thu Feb 24 2022 Ben Reedy <breed808@breed808.com> - 0.25.18-1
-- Update to v0.25.18
-
-* Sat Oct 09 2021 Ben Reedy <breed808@breed808.com> - 0.24.15-1
-- Update to latest upstream release
-
-* Mon Jul 19 2021 Ben Reedy <breed808@breed808.com> - 0.24.14-1
-- Update to latest upstream release
-
-* Sat Jun 19 2021 Ben Reedy <breed808@breed808.com> - 0.24.10-1
-- Update to latest upstream release
-
-* Sat May 08 2021 Ben Reedy <breed808@breed808.com> - 0.24.9-1
-- Update to latest upstream release
-
-* Thu Apr 01 2021 Ben Reedy <breed808@breed808.com> - 0.24.7-1
-- Update to latest upstream release
-
-* Sat Mar 27 2021 Ben Reedy <breed808@breed808.com> - 0.24.4-1
-- Update to latest upstream release
-
-* Tue Jan 19 2021 Ben Reedy <breed808@breed808.com> - 0.24.2-1
-- Update to latest upstream release
-
-* Wed Nov 25 2020 Ben Reedy <breed808@breed808.com> - 0.24.1-1
-- Update to latest upstream release
-
-* Thu Nov 19 2020 Ben Reedy <breed808@breed808.com> - 0.23.10-1
-- Update to latest upstream release
-
-* Tue Nov 10 2020 Ben Reedy <breed808@breed808.com> - 0.23.9-1
-- Update to latest upstream release
+%autochangelog
