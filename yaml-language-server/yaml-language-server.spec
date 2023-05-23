@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 Name:           yaml-language-server
-Version:        1.12.0
-Release:        1%{?dist}
+Version:        1.13.0
+Release:        %autorelease
 Summary:        Language Server for YAML Files
 License:        MIT
 URL:            https://github.com/redhat-developer/yaml-language-server
@@ -44,23 +44,4 @@ cp -r bin lib node_modules out package.json \
 %{_libdir}/node_modules/%{name}
 
 %changelog
-* Sat Mar 18 2023 Ben Reedy <breed808@breed808.com> - 1.12.0-1
-- Upgrade to v1.12.0
-
-* Tue Jan 10 2023 Ben Reedy <breed808@breed808.com> - 1.11.0-1
-- Upgrade to v1.11.0
-
-* Wed Aug 22 2022 Ben Reedy <breed808@breed808.com> - 1.10.0-1
-- Upgrade to v1.10.0
-
-* Fri July 13 2022 Ben Reedy <breed808@breed808.com> - 1.9.0-1
-- Upgrade to v1.9.0
-
-* Fri June 10 2022 Ben Reedy <breed808@breed808.com> - 1.8.0-1
-- Upgrade to v1.8.0
-
-* Tue Apr 26 2022 Ben Reedy <breed808@breed808.com> - 1.7.0-1
-- Upgrade to v1.7.0
-
-* Wed Apr 20 2022 Ben Reedy <breed808@breed808.com> - 1.6.0-1
-- Initial package
+%autochangelog
