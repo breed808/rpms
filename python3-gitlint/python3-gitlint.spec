@@ -1,6 +1,6 @@
 %global srcname gitlint
 Name:       python-%{srcname}
-Version:    0.17.0
+Version:    0.19.1
 Release:    1%{?dist}
 Summary:    Linting for your git commit messages
 
@@ -54,22 +54,4 @@ cd gitlint-core
 
 
 %changelog
-* Fri Feb 18 2022 Ben Reedy <breed808@breed808.com> - 0.17.0-1
-- Update to v0.17.0
-
-* Tue Nov 23 2021 Ben Reedy <breed808@breed808.com> - 0.16.0-2
-- Set package runtime dependencies correctly.
-
-* Wed Nov 17 2021 Ben Reedy <breed808@breed808.com> - 0.16.0-1
-- Update to latest release
-- Add setuptools build dependency
-
-* Thu Feb 04 2021 Ben Reedy <breed808@breed808.com> - 0.15.0-1
-- Update to latest release
-- Set manual runtime dependencies, as automatic dependency versioning is too strict.
-
-* Wed Apr 15 2020 Ben Reedy <breed808@breed808.com> - 0.13.1-1
-- Update to 0.13.1
-
-* Wed Jan 01 2020 Ben Reedy <breed808@breed808.com> - 0.12.0-1
-- Initial package
+%autochangelog
