@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           k9s
-Version:        0.40.10
+Version:        0.50.4
 Release:        %autorelease
 Summary:        Kubernetes text-based user interface (TUI)
 License:        Apache2
