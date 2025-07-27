@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:          lua-language-server
-Version:       3.11.0
+Version:       3.15.0
 Release:       1%{?dist}
 Summary:       A language server that offers Lua language support
 License:       BSD-3-Clause AND BSL-1.0 AND LGPL-2.1 AND MIT AND Unlicense
