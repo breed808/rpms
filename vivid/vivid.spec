@@ -2,7 +2,7 @@
 %bcond_without check
 
 Name:       vivid
-Version:    0.8.0
+Version:    0.10.1
 Release:    1%{?dist}
 Summary:    LS_COLORS generator
 
@@ -46,17 +46,4 @@ install -Dm644 -t %{buildroot}%{_datadir}/vivid/themes themes/*
 %{_datadir}/vivid
 
 %changelog
-* Sun May 29 2022 Ben Reedy <breed808@breed808.com> - 0.8.0-1
-- Update to latest upstream release
-
-* Wed Nov 17 2021 Ben Reedy <breed808@breed808.com> - 0.7.0-1
-- Update to latest upstream release
-
-* Thu Oct 29 2020 Ben Reedy <breed808@breed808.com> - 0.6.0-1
-- Update to latest upstream release
-
-* Tue Mar 24 2020 Ben Reedy <breed808@breed808.com> - 0.5.0-1
-- Update to latest upstream release
-
-* Fri Aug 02 2019 Ben Reedy <breed808@breed808.com> - 0.4.0-1
-- Initial package
+%autochangelog
