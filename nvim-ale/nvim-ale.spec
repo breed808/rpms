@@ -1,7 +1,7 @@
 %global         vimfiles        %{_datadir}/nvim/runtime
 
 Name:           nvim-ale
-Version:        3.3.0
+Version:        4.0.0
 Release:        1%{?dist}
 Summary:        Asynchronous Lint Engine for Vim/NeoVim
 License:        BSD
