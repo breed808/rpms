@@ -9,6 +9,7 @@ Source0:        https://github.com/redhat-developer/yaml-language-server/archive
 Requires:       nodejs >= 12
 
 BuildRequires:  nodejs
+BuildRequires:  nodejs-npm
 BuildRequires:  yarnpkg
 BuildRequires:  jq
 
