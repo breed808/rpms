@@ -111,7 +111,9 @@ cp      -rp       ale_linters/      %{buildroot}%{vimfiles}/ale_linters
 cp      -rp       autoload/*        %{buildroot}%{vimfiles}/autoload/
 install -p -m0644 doc/*.txt         %{buildroot}%{vimfiles}/doc/
 cp      -rp       ftplugin/         %{buildroot}%{vimfiles}/ftplugin
+cp      -rp       lua/              %{buildroot}%{vimfiles}/lua
 cp      -rp       plugin/           %{buildroot}%{vimfiles}/plugin
+cp      -rp       rplugin/          %{buildroot}%{vimfiles}/rplugin
 cp      -rp       syntax/           %{buildroot}%{vimfiles}/syntax
 
 %post
@@ -127,7 +129,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %dir %{vimfiles}/autoload/ale/completion
 %dir %{vimfiles}/autoload/ale/engine
 %dir %{vimfiles}/doc
+%dir %{vimfiles}/lua
 %dir %{vimfiles}/plugin
+%dir %{vimfiles}/rplugin
 %{vimfiles}/ale_linters/
 %{vimfiles}/autoload/asyncomplete/sources/ale.vim
 %{vimfiles}/autoload/ale.vim
@@ -142,7 +146,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/autoload/ale/uri/*.vim
 %{vimfiles}/doc/ale*.txt
 %{vimfiles}/ftplugin/*.vim
+%{vimfiles}/lua/ale/*.lua
 %{vimfiles}/plugin/ale.vim
+%{vimfiles}/rplugin/python3/deoplete/sources/ale.py
 %{vimfiles}/syntax/*.vim
 
 %files ansible
@@ -266,6 +272,9 @@ nvim -u NONE -U NONE -X -n '+set nobackup nomore' '+helptags %{vimfiles}/doc/' '
 %{vimfiles}/ale_linters/vim
 
 %changelog
+* Sun Sep 28 2025 Ben Reedy <breed808@breed808.com> - 4.0.0-1
+- Update to v4.0.0
+
 * Mon Dec 26 2022 Ben Reedy <breed808@breed808.com> - 3.3.0-1
 - Update to v3.3.0
 
