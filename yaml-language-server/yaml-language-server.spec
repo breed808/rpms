@@ -26,11 +26,7 @@ yarn compile
 yarn build:libs
 
 %install
-# Emulate `npm prune --production`
-cp package.json{,.bak}
-read -ra devDependencies < <(jq -r '.devDependencies | keys | join(" ")' package.json)
-yarn remove --frozen-lockfile "${devDependencies[@]}"
-mv package.json{.bak,}
+npm prune --production
 
 install -d "%{buildroot}%{_bindir}/node_modules/%{name}"
 install -d "%{buildroot}%{_libdir}/node_modules/%{name}"
