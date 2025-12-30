@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           kustomize
-Version:        5.7.1
+Version:        5.8.0
 Release:        %autorelease
 Summary:        Customization of kubernetes YAML configurations
 License:        Apache2
