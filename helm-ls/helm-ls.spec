@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           helm-ls
-Version:        0.5.0
+Version:        0.5.4
 Release:        %autorelease
 Summary:        Language server for Helm
 License:        MIT
