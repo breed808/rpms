@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           arduino-language-server
-Version:        0.7.2
+Version:        0.7.7
 Release:        1%{?dist}
 Summary:        Language server for Arduino programming language
 License:        Apache2
@@ -44,14 +44,4 @@ install -Dm0755 arduino-language-server %{buildroot}%{_bindir}/arduino-language-
 
 
 %changelog
-* Sat Oct 29 2022 Ben Reedy <breed808@breed808.com> - 0.7.2-1
-- Update to v0.7.2
-
-* Fri Feb 18 2022 Ben Reedy <breed808@breed808.com> - 0.6.0-3
-- Add clangd runtime dependency
-
-* Fri Feb 18 2022 Ben Reedy <breed808@breed808.com> - 0.6.0-2
-- Add arduino-cli runtime dependency
-
-* Thu Feb 17 2022 Ben Reedy <breed808@breed808.com> - 0.6.0-1
-- Initial package
+%autochangelog
