@@ -31,7 +31,7 @@ npm prune --production
 install -d "%{buildroot}%{_bindir}/node_modules/%{name}"
 install -d "%{buildroot}%{_libdir}/node_modules/%{name}"
 ln -s %{_libdir}/node_modules/%{name}/bin/%{name} "%{buildroot}"/usr/bin/%{name}
-cp -r bin lib node_modules out package.json \
+cp -r bin l10n lib node_modules out package.json \
   "%{buildroot}%{_libdir}/node_modules/%{name}"
 
 %files
