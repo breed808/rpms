@@ -10,8 +10,7 @@ Requires:       nodejs >= 12
 
 BuildRequires:  nodejs
 BuildRequires:  nodejs-npm
-BuildRequires:  yarnpkg
-BuildRequires:  jq
+BuildRequires:  typescript
 
 %description
 Language Server for YAML Files
@@ -21,18 +20,17 @@ Language Server for YAML Files
 
 
 %build
-yarn --frozen-lockfile
-yarn compile
-yarn build:libs
+npm ci
+npm run compile
 
 %install
-npm prune --production
+npm prune --omit=dev
 
-install -d "%{buildroot}%{_bindir}/node_modules/%{name}"
 install -d "%{buildroot}%{_libdir}/node_modules/%{name}"
-ln -s %{_libdir}/node_modules/%{name}/bin/%{name} "%{buildroot}"/usr/bin/%{name}
-cp -r bin l10n lib node_modules out package.json \
+install -d "%{buildroot}%{_bindir}"
+cp -r bin l10n node_modules out package.json \
   "%{buildroot}%{_libdir}/node_modules/%{name}"
+ln -s "%{_libdir}/node_modules/%{name}/bin/%{name}" "%{buildroot}/usr/bin/%{name}"
 
 %files
 %doc README.md CHANGELOG.md
