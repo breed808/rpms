@@ -2,7 +2,7 @@
 %bcond_without check
 
 Name:       vivid
-Version:    0.10.1
+Version:    0.11.1
 Release:    1%{?dist}
 Summary:    LS_COLORS generator
 
