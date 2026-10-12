@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           argocd
-Version:        3.5.3
+Version:        3.5.5
 Release:        %autorelease
 Summary:        Declarative Continuous Deployment for Kubernetes
 License:        Apache-2.0
