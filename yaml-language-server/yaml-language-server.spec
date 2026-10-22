@@ -1,6 +1,6 @@
 %global debug_package %{nil}
 Name:           yaml-language-server
-Version:        1.25.0
+Version:        2.0.0
 Release:        %autorelease
 Summary:        Language Server for YAML Files
 License:        MIT
